@@ -11,16 +11,25 @@ body {
 	background-color: aliceblue;
 }
 
+.form {
+	padding: 10px;
+	text-align: left;
+}
+
+.form > * {
+	margin: 0;
+}
+
 .title {
-	width: 100px;
+	width: 50px;
 }
 
 .author {
-	width: 100px;
+	width: 50px;
 }
 
 .pages {
-	width: 100px;
+	width: 50px;
 }
 
 .list-outer-container {

@@ -1,4 +1,4 @@
-let myLibrary = [];
+const myLibrary = [];
 
 function Book(title, author, pages, read) {
 	this.title = title;
@@ -14,10 +14,41 @@ function Book(title, author, pages, read) {
 
 const theHobbit = new Book('The Hobbit', 'J.R.R', '295', 'no');
 
-function addToLibrary(book) {
+// DOM elements
+let bookList = document.querySelector('.library-list');
+let title = document.querySelector('.title');
+let author = document.querySelector('.author');
+let pages = document.querySelector('.pages');
+let read = document.querySelector('.read');
+let submit = document.querySelector('.submit');
+let form = document.querySelector('.form');
+
+// function to add book object to mylibrary array and print info to list
+function addBookToLibrary(title, author, pages, read) {
+	const book = new Book(title, author, pages, read);
 	myLibrary.push(book);
+	printBookInfo(myLibrary);
 }
 
-addToLibrary(theHobbit);
+// function to textContent myLibrary array text
+function printBookInfo(array) {
+	array.forEach((element) => {
+		// needs to create new li element to attach element.info();
+		return (bookList.textContent = element.info());
+	});
+}
 
-console.log(myLibrary);
+// function when submit, elements in form will push into myLibrary.
+form.addEventListener('submit', (e) => {
+	e.preventDefault();
+	let titleArg;
+	let authorArg;
+	let pagesArg;
+	let readArg;
+	titleArg = form.title.value;
+	authorArg = form.author.value;
+	pagesArg = form.pages.value;
+	readArg = form.read.value;
+
+	addBookToLibrary(titleArg, authorArg, pagesArg, readArg);
+});
