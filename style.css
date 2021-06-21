@@ -1,0 +1,53 @@
+body {
+	background-color: rgb(245, 245, 235);
+	text-align: center;
+}
+
+.top {
+	max-width: 800px;
+	height: 40px;
+	margin: 10px auto;
+	border: 1px solid black;
+	background-color: aliceblue;
+}
+
+.title {
+	width: 100px;
+}
+
+.author {
+	width: 100px;
+}
+
+.pages {
+	width: 100px;
+}
+
+.list-outer-container {
+	max-width: 800px;
+	height: fit-content;
+	margin: 50px auto;
+	border: 1px solid black;
+	background-color: rgba(204, 180, 190, 0.521);
+}
+
+.between-list {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.between-list-items {
+	border-bottom: 1px solid black;
+	margin: 0 auto 0 0;
+}
+
+.list-inner-container {
+	margin: 30px 1px 1px;
+	border: 1px solid purple;
+	background-color: white;
+}
+
+li {
+	list-style: none;
+}
