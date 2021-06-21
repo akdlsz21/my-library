@@ -33,7 +33,7 @@ function addBookToLibrary(title, author, pages, read) {
 // function to textContent myLibrary array text
 function printBookInfo(array) {
 	array.forEach((element) => {
-		// needs to create new li element to attach element.info();
+		// needs to create new li element to attach element.info();//
 		return (bookList.textContent = element.info());
 	});
 }
