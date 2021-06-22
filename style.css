@@ -57,6 +57,8 @@ body {
 	background-color: white;
 }
 
-li {
-	list-style: none;
+.library-list > * {
+	list-style: circle;
+	border: 1px solid grey;
+	font-size: 18px;
 }
