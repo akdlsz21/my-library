@@ -13,23 +13,23 @@ body {
 
 .form {
 	padding: 10px;
-	text-align: left;
+	justify-content: space-between;
 }
 
 .form > * {
-	margin: 0;
+	margin: auto auto;
 }
 
 .title {
-	width: 50px;
+	width: 100px;
 }
 
 .author {
-	width: 50px;
+	width: 70px;
 }
 
 .pages {
-	width: 50px;
+	width: 40px;
 }
 
 .list-outer-container {
@@ -58,7 +58,7 @@ body {
 }
 
 .library-list > * {
-	list-style: circle;
+	list-style: none;
 	border: 1px solid grey;
 	font-size: 18px;
 }

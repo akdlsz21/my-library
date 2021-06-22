@@ -35,9 +35,11 @@ form.addEventListener('submit', (e) => {
 	titleArg = form.title.value;
 	authorArg = form.author.value;
 	pagesArg = form.pages.value;
-	readArg = form.read.value;
+	readArg = form.read.checked;
 
 	addBookToLibrary(titleArg, authorArg, pagesArg, readArg);
+
+	setInputDefault();
 });
 
 // function to add book object to mylibrary array and print info to list
@@ -49,6 +51,7 @@ function addBookToLibrary(title, author, pages, read) {
 
 // function to textContent myLibrary array text
 function printBookInfo(array) {
+	// erases all existing child in booklist, or it will duplicate the list
 	eraseListChild();
 	array.forEach((element) => {
 		// needs to create new li element to attach element.info();//
@@ -61,8 +64,18 @@ function printBookInfo(array) {
 }
 
 // function to erase childElementNode in list,
+
+// do not use lastElementChild, don't know why. Look into it later
 function eraseListChild() {
 	while (bookList.lastChild) {
 		bookList.removeChild(bookList.lastChild);
 	}
+}
+
+// function to set all input value to default
+function setInputDefault() {
+	title.value = 'A Game of Thrones ';
+	author.value = '';
+	pages.value = '';
+	read.checked = false;
 }
